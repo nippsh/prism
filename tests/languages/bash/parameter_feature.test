@@ -4,6 +4,7 @@ docker run
 --restart=always \
 --privileged \
 -dit \
+--group-add nogroup \
 easyj/elk:7.12.1
 
 ----------------------------------------------------
@@ -30,6 +31,10 @@ easyj/elk:7.12.1
 	["punctuation", "\\"],
 
 	["parameter", "-dit"],
+	["punctuation", "\\"],
+
+	["parameter", "--group-add"],
+	" nogroup ",
 	["punctuation", "\\"],
 
 	"\r\neasyj/elk:7.12.1"
